@@ -1,5 +1,5 @@
 {
-  "name": "@flipflop-sdk-v2/node",
+  "name": "@flipflop-sdk/node-v2",
   "version": "1.0.0",
   "description": "FlipFlop Node.js SDK v2 for programmatic token operations",
   "main": "dist/index.js",
