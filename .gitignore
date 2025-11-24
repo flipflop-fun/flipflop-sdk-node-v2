@@ -1,0 +1,8 @@
+node_modules
+dist
+accounts
+.claude
+CLAUDE.md
+temp
+tests/init.test.ts
+user-keypair.json

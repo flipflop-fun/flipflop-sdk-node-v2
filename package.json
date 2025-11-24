@@ -1,0 +1,73 @@
+{
+  "name": "@flipflop-sdk-v2/node",
+  "version": "1.0.0",
+  "description": "FlipFlop Node.js SDK v2 for programmatic token operations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp -r src/idl dist/idl/",
+    "dev": "tsc --watch",
+    "lint": "prettier \"src/**/*{.js,.ts}\" --check",
+    "lint:fix": "prettier \"src/**/*{.js,.ts}\" -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:e2e": "jest tests/e2e --runInBand",
+    "prepublishOnly": "yarn build"
+  },
+  "keywords": [
+    "solana",
+    "flipflop",
+    "sdk",
+    "nodejs",
+    "defi",
+    "token",
+    "library"
+  ],
+  "author": "FlipFlop",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flipflop-fun/sdk.git"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.31.1",
+    "@raydium-io/raydium-sdk-v2": "^0.2.8-alpha",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/spl-token-metadata": "^0.1.6",
+    "@solana/web3.js": "^1.98.0",
+    "@types/decimal.js": "^0.0.32",
+    "axios": "^1.11.0",
+    "bn.js": "5.2.1",
+    "bs58": "^6.0.0",
+    "decimal.js": "^10.6.0",
+    "form-data": "^4.0.4",
+    "sleep-promise": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.2.2",
+    "@types/bn.js": "5.1.1",
+    "@types/form-data": "^2.5.2",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

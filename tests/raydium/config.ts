@@ -1,0 +1,6 @@
+export const TOKEN_MINT = "4fwi3ar1FMnbjjbcbQHjxGsEkW4Dni8rvZxQp2ZafQ2j";
+export const BASE_MINT = "9R4AhtSgf1BXa356x1SpJP6jXnMBF1q9FD2RPS3s4jxP";
+// mijyHgDVcKD1oGxr6E8NXkHhkdu5LDQRzGpR9JfTtSE
+// export const OPERATOR_KEYPAIR = "4ciQbhLkfQNhxRfb8qog5WooAVTjtSvRkSi5T51YZqPrQ2N1DmdBCH58FiTfKPHAP7spFZF6cuy9kCq1Rnu4w2wt";
+// FhGn4TJykwL6tKmMkq19dZmV5XAdNcGUVWUA3Edfpf5x
+export const OPERATOR_KEYPAIR = "5NyFiYrR2sd1V42kbhP3qK7pzacigfb5wQ7X8YFMA8cmo2mfoA1JwerqZbRxmgsnxAEfC2QQ59cKz9cyx5vkQ8Jr";

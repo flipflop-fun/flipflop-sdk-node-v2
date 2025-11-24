@@ -1,0 +1,27 @@
+import { describe, it } from '@jest/globals';
+import { setUrc } from '../src/set-urc';
+import { loadKeypairFromBase58 } from '../src/utils';
+import { PublicKey } from '@solana/web3.js';
+import { OPERATOR_KEYPAIR } from './raydium/config';
+
+describe('set urc', () => {
+  describe('successful set urc', () => {
+    it('should set urc', async () => {
+      // Arrange
+      const setUrcOptions = {
+        rpc: 'http://127.0.0.1:8899',
+        mint: new PublicKey('C1yDFUFsv8HRhB2nX2dpnDffEycmbzNKZymkAhA52kcx'),
+        urc: 'TRP10_URC',
+        refAccount: loadKeypairFromBase58(OPERATOR_KEYPAIR),
+      };
+
+      // Act
+      const result = await setUrc(setUrcOptions);
+      console.log(result);
+      // Assert
+      expect(result).toBeDefined();
+      expect(result?.data?.urc).toBe(setUrcOptions.urc);
+      expect(result?.data?.usageCount).toBe(0);
+    });
+  });
+});
