@@ -7,7 +7,7 @@ export const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
 export const RENT_PROGRAM_ID = new PublicKey(
   "SysvarRent111111111111111111111111111111111"
 );
-
+export const LAMPORTS_PER_USDC = 1000000;
 export const METADATA_SEED = "metadata";
 export const MINT_SEED = "fair_mint";
 export const CONFIG_DATA_SEED = "config_data";

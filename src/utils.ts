@@ -9,6 +9,7 @@ import {
   Transaction,
   AddressLookupTableProgram,
   sendAndConfirmTransaction,
+  LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import fs from "fs";
 import bs58 from "bs58";
@@ -40,6 +41,7 @@ import {
 } from "@solana/spl-token";
 import {
   CODE_ACCOUNT_SEED,
+  LAMPORTS_PER_USDC,
   METADATA_SEED,
   ORACLE_SEED,
   POOL_AUTH_SEED,
@@ -208,18 +210,18 @@ export const parseConfigData = async (
         resolve({
           admin: configData.admin,
           // feeVault: configData.feeVault.toBase58(),
-          feeRate: configData.feeRate.toNumber() / 1000000000,
+          feeRate: configData.feeRate.toNumber() / LAMPORTS_PER_USDC,
           maxSupply: new BN(configData.maxSupply)
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           targetEras: configData.targetEras,
           initialMintSize: new BN(configData.initialMintSize)
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           initialTargetMintSizePerEpoch: new BN(
             configData.initialTargetMintSizePerEpoch
           )
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           epochesPerEra: new BN(configData.epochesPerEra).toNumber(),
           targetSecondsPerEpoch: new BN(
@@ -230,7 +232,7 @@ export const parseConfigData = async (
           baseVault: configData.baseVault,
           liquidityTokensRatio: configData.liquidityTokensRatio,
           supply: new BN(configData.mintStateData.supply)
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           currentEra: configData.mintStateData.currentEra,
           currentEpoch: configData.mintStateData.currentEpoch.toNumber(),
@@ -243,17 +245,17 @@ export const parseConfigData = async (
           lastDifficultyCoefficient:
             configData.mintStateData.lastDifficultyCoefficientEpoch,
           mintSizeEpoch: new BN(configData.mintStateData.mintSizeEpoch)
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           quantityMintedEpoch: new BN(
             configData.mintStateData.quantityMintedEpoch
           )
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           targetMintSizeEpoch: new BN(
             configData.mintStateData.targetMintSizeEpoch
           )
-            .div(new BN("1000000000"))
+            .div(new BN(LAMPORTS_PER_SOL))
             .toNumber(),
           graduateEpoch: configData.mintStateData.graduateEpoch,
         });

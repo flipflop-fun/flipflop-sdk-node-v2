@@ -170,24 +170,24 @@ export const addLiquidity = async (
     if (tokenReserve.isZero()) {
       return {
         success: false,
-        message: "Cannot calculate SOL amount: token reserve is zero",
+        message: "Cannot calculate base token amount: token reserve is zero",
       };
     }
 
     // Calculate required SOL amount
-    const requiredSolAmountBN = tokenAmountBN.mul(solReserve).div(tokenReserve);
+    const requiredBaseTokenAmountBN = tokenAmountBN.mul(solReserve).div(tokenReserve);
 
     // Check SOL balance
     const solBalance = await connection.getBalance(options.payer.publicKey);
     // console.log("SOL balance:", solBalance / 1e9);
     // console.log("Required SOL:", requiredSolAmount);
 
-    if (solBalance < requiredSolAmountBN.toNumber()) {
+    if (solBalance < requiredBaseTokenAmountBN.toNumber()) {
       return {
         success: false,
-        message: `Insufficient SOL balance. Available: ${
-          solBalance / 1e9
-        }, Required: ${requiredSolAmountBN.toNumber() / 1e9}`,
+        message: `Insufficient base token balance. Available: ${
+          solBalance / LAMPORTS_PER_SOL
+        }, Required: ${requiredBaseTokenAmountBN.toNumber() / LAMPORTS_PER_SOL}`,
       };
     }
 
@@ -198,7 +198,7 @@ export const addLiquidity = async (
       poolInfoData,
       new PublicKey(options.mint),
       new PublicKey(config.baseToken),
-      requiredSolAmountBN,
+      requiredBaseTokenAmountBN,
       tokenAmountBN,
       options.payer,
       slippagePercent

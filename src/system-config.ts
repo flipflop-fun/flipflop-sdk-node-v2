@@ -1,6 +1,6 @@
-import { Connection, PublicKey } from "@solana/web3.js";
+import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 import { initProviderNoSigner } from "./utils";
-import { LAUNCH_RULE_SEEDS, SYSTEM_CONFIG_SEEDS } from "./constants";
+import { LAMPORTS_PER_USDC, LAUNCH_RULE_SEEDS, SYSTEM_CONFIG_SEEDS } from "./constants";
 import { CONFIGS, getNetworkType } from "./config";
 import { SystemConfigAccountData, SystemConfigAccountOptions } from "./types";
 import { ApiResponse } from "./raydium/types";
@@ -56,15 +56,15 @@ export const getSystemConfig = async (
         referrerResetIntervalSeconds:
           systemConfigAccountInfo.referrerResetIntervalSeconds.toNumber(),
         updateMetadataFee:
-          systemConfigAccountInfo.updateMetadataFee.toNumber() / 1e9,
+          systemConfigAccountInfo.updateMetadataFee.toNumber() / LAMPORTS_PER_USDC,
         customizedDeployFee:
-          systemConfigAccountInfo.customizedDeployFee.toNumber() / 1e9,
+          systemConfigAccountInfo.customizedDeployFee.toNumber() / LAMPORTS_PER_USDC,
         initPoolBaseAmount:
-          systemConfigAccountInfo.initPoolBaseAmount.toNumber() / 100000,
+          systemConfigAccountInfo.initPoolBaseAmount.toNumber() / 100000, // deprecated
         graduateFeeRate: systemConfigAccountInfo.graduateFeeRate.toNumber(),
-        minGraduateFee: systemConfigAccountInfo.minGraduateFee.toNumber() / 1e9,
+        minGraduateFee: systemConfigAccountInfo.minGraduateFee.toNumber() / LAMPORTS_PER_USDC,
         raydiumCpmmCreateFee:
-          systemConfigAccountInfo.raydiumCpmmCreateFee.toNumber() / 1e9,
+          systemConfigAccountInfo.raydiumCpmmCreateFee.toNumber() / LAMPORTS_PER_SOL,
         isPause: systemConfigAccountInfo.isPause,
       },
     };
