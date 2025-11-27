@@ -674,8 +674,7 @@
           "writable": true
         },
         {
-          "name": "base_mint",
-          "address": "9R4AhtSgf1BXa356x1SpJP6jXnMBF1q9FD2RPS3s4jxP"
+          "name": "base_mint"
         },
         {
           "name": "payer_base_ata",
@@ -1084,8 +1083,7 @@
           "writable": true
         },
         {
-          "name": "base_mint",
-          "address": "9R4AhtSgf1BXa356x1SpJP6jXnMBF1q9FD2RPS3s4jxP"
+          "name": "base_mint"
         },
         {
           "name": "sol_fee_payer",
@@ -3137,10 +3135,6 @@
           "type": "u32"
         },
         {
-          "name": "protocol_fee_rate",
-          "type": "u64"
-        },
-        {
           "name": "protocol_fee_account",
           "type": "pubkey"
         },
@@ -3169,16 +3163,8 @@
           "type": "u64"
         },
         {
-          "name": "min_graduate_fee",
-          "type": "u64"
-        },
-        {
           "name": "raydium_cpmm_create_fee",
           "type": "u64"
-        },
-        {
-          "name": "transfer_fee_basis_points",
-          "type": "u16"
         },
         {
           "name": "is_pause",
@@ -3362,24 +3348,12 @@
           }
         },
         {
-          "name": "base_mint",
-          "address": "9R4AhtSgf1BXa356x1SpJP6jXnMBF1q9FD2RPS3s4jxP"
-        },
-        {
-          "name": "payer_base_ata",
-          "writable": true
-        },
-        {
-          "name": "protocol_fee_base_ata",
+          "name": "protocol_fee_account",
           "writable": true
         },
         {
           "name": "system_program",
           "address": "11111111111111111111111111111111"
-        },
-        {
-          "name": "token_program",
-          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
         },
         {
           "name": "token_metadata_program",
@@ -4506,6 +4480,10 @@
           {
             "name": "base_vault",
             "type": "pubkey"
+          },
+          {
+            "name": "base_decimals",
+            "type": "u8"
           }
         ]
       }
@@ -5036,10 +5014,6 @@
             "type": "u32"
           },
           {
-            "name": "protocol_fee_rate",
-            "type": "f64"
-          },
-          {
             "name": "protocol_fee_account",
             "type": "pubkey"
           },
@@ -5068,16 +5042,8 @@
             "type": "u64"
           },
           {
-            "name": "min_graduate_fee",
-            "type": "u64"
-          },
-          {
             "name": "raydium_cpmm_create_fee",
             "type": "u64"
-          },
-          {
-            "name": "transfer_fee_basis_points",
-            "type": "u16"
           },
           {
             "name": "is_pause",
@@ -5150,6 +5116,14 @@
           {
             "name": "base_vault",
             "type": "pubkey"
+          },
+          {
+            "name": "base_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "base_decimals",
+            "type": "u8"
           },
           {
             "name": "mint_token_vault",
