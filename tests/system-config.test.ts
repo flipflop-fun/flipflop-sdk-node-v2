@@ -21,7 +21,6 @@ describe('getSystemConfig', () => {
       // expect(result?.data?.customizedDeployFee).toBe(10);
       // expect(result?.data?.initPoolBaseAmount).toBe(0.25);
       // expect(result?.data?.graduateFeeRate).toBe(5);
-      // expect(result?.data?.minGraduateFee).toBe(5);
       // expect(result?.data?.raydiumCpmmCreateFee).toBe(0.15);
     });
   });

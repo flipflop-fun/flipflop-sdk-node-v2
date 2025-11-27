@@ -569,7 +569,6 @@ interface SystemConfigAccountData {
   customizedDeployFee: number;
   initPoolBaseAmount: number;
   graduateFeeRate: number;
-  minGraduateFee: number;
   raydiumCpmmCreateFee: number;
 }
 ```

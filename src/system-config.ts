@@ -62,7 +62,6 @@ export const getSystemConfig = async (
         initPoolBaseAmount:
           systemConfigAccountInfo.initPoolBaseAmount.toNumber() / 100000, // deprecated
         graduateFeeRate: systemConfigAccountInfo.graduateFeeRate.toNumber(),
-        minGraduateFee: systemConfigAccountInfo.minGraduateFee.toNumber() / LAMPORTS_PER_USDC,
         raydiumCpmmCreateFee:
           systemConfigAccountInfo.raydiumCpmmCreateFee.toNumber() / LAMPORTS_PER_SOL,
         isPause: systemConfigAccountInfo.isPause,

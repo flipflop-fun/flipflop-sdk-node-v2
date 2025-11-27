@@ -154,7 +154,6 @@ export interface SystemConfigAccountData {
   customizedDeployFee: number;
   initPoolBaseAmount: number;
   graduateFeeRate: number;
-  minGraduateFee: number;
   raydiumCpmmCreateFee: number;
   isPause: boolean;
   launchRuleAccount: PublicKey;
