@@ -9,13 +9,14 @@ describe('Mint token', () => {
       // Arrange
       const mintTokenOptions = {
         rpc: 'http://127.0.0.1:8899',
-        mint: new PublicKey('C1yDFUFsv8HRhB2nX2dpnDffEycmbzNKZymkAhA52kcx'),
-        urc: 'TRP10_URC',
-        minter: loadKeypairFromBase58('5RcAMb2c4Y6qdZjLJ1R5cLhNNoY8S3gLNg9WuWNpLUuka9FoyWib5yyqzpPBy7t4WbPaHLrxU2c77ZKDo3egsqv4'), // 9nWe34wW8P5jbwVGkFXmVvRpTyVikhJrLaxSLmiF7sp8
+        mint: new PublicKey('8n3N7WEuw3VGWkur5g5Xh2c4qvLWZ5HL9UU4QUKWCXwy'),
+        urc: 'URC_TT10',
+        minter: loadKeypairFromBase58('2hjd86vMvsXb1Zbpu6pTz1TgRrDsasr2PukkTBRSUz5GFmGqmN3FGdk1qpzk3hcCJwP8qXoVJwAmiHqrZ8UjAASi'), // 9nWe34wW8P5jbwVGkFXmVvRpTyVikhJrLaxSLmiF7sp8
       };
 
       // Act
       const result = await mintToken(mintTokenOptions);
+      console.log(result)
       console.log("tx", result?.data?.tx);
       // Assert
       expect(result?.success).toBe(true);

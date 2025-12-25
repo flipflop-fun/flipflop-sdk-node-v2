@@ -117,6 +117,95 @@ export type FairMintTokenV2 = {
       ]
     },
     {
+      "name": "closeSystemConfig",
+      "discriminator": [
+        6,
+        107,
+        135,
+        27,
+        8,
+        208,
+        165,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "systemConfigAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  121,
+                  115,
+                  116,
+                  101,
+                  109,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103,
+                  95,
+                  118,
+                  50,
+                  46,
+                  48
+                ]
+              },
+              {
+                "kind": "const",
+                "value": [
+                  182,
+                  170,
+                  55,
+                  20,
+                  102,
+                  217,
+                  47,
+                  143,
+                  149,
+                  33,
+                  37,
+                  172,
+                  229,
+                  131,
+                  149,
+                  124,
+                  52,
+                  126,
+                  53,
+                  73,
+                  199,
+                  69,
+                  248,
+                  211,
+                  168,
+                  196,
+                  34,
+                  161,
+                  132,
+                  131,
+                  85,
+                  210
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
       "name": "closeToken",
       "discriminator": [
         26,
@@ -1170,6 +1259,41 @@ export type FairMintTokenV2 = {
           "writable": true
         },
         {
+          "name": "graduationControlAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
           "name": "poolState",
           "writable": true,
           "pda": {
@@ -1628,6 +1752,41 @@ export type FairMintTokenV2 = {
         {
           "name": "lpMint",
           "writable": true
+        },
+        {
+          "name": "graduationControlAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -1888,6 +2047,41 @@ export type FairMintTokenV2 = {
             "The program account for the most recent oracle observation"
           ],
           "writable": true
+        },
+        {
+          "name": "graduationControlAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -2144,6 +2338,41 @@ export type FairMintTokenV2 = {
             "The program account for the most recent oracle observation"
           ],
           "writable": true
+        },
+        {
+          "name": "graduationControlAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -2400,6 +2629,41 @@ export type FairMintTokenV2 = {
         {
           "name": "lpMint",
           "writable": true
+        },
+        {
+          "name": "graduationControlAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         },
         {
           "name": "memoProgram",
@@ -3406,6 +3670,19 @@ export type FairMintTokenV2 = {
       ]
     },
     {
+      "name": "graduationControlData",
+      "discriminator": [
+        171,
+        21,
+        240,
+        108,
+        120,
+        137,
+        159,
+        145
+      ]
+    },
+    {
       "name": "launchRuleData",
       "discriminator": [
         219,
@@ -4250,6 +4527,21 @@ export type FairMintTokenV2 = {
       "code": 6131,
       "name": "solFeePayerToBeSystemAccount",
       "msg": "Sol fee payer should be system account"
+    },
+    {
+      "code": 6132,
+      "name": "graduationControlNotInitialized",
+      "msg": "Graduation control account not initialized"
+    },
+    {
+      "code": 6133,
+      "name": "wsolBudgetExceeded",
+      "msg": "WSOL market management budget exceeded in current window"
+    },
+    {
+      "code": 6134,
+      "name": "wsolBudgetInvariantFailed",
+      "msg": "WSOL budget invariant failed"
     }
   ],
   "types": [
@@ -4379,6 +4671,38 @@ export type FairMintTokenV2 = {
       }
     },
     {
+      "name": "graduationControlData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "graduateTimestamp",
+            "type": "u64"
+          },
+          {
+            "name": "graduateBaseTokenBase",
+            "type": "u64"
+          },
+          {
+            "name": "usedBaseTokenBudget",
+            "type": "u64"
+          },
+          {
+            "name": "postGraduationBaseTokenAccumulated",
+            "type": "u64"
+          },
+          {
+            "name": "baseMint",
+            "type": "pubkey"
+          },
+          {
+            "name": "baseDecimals",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
       "name": "initializeTokenConfigData",
       "type": {
         "kind": "struct",
@@ -4485,6 +4809,10 @@ export type FairMintTokenV2 = {
           },
           {
             "name": "baseVault",
+            "type": "pubkey"
+          },
+          {
+            "name": "baseMint",
             "type": "pubkey"
           },
           {

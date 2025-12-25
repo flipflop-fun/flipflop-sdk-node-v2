@@ -13,7 +13,7 @@ export const getNetworkType = (
 export const CONFIGS = {
   local: {
     programId: "FLiPUFYBgPW5q73tiFX92GkmdX5kiQcAQB8dYQurPHR",
-    lookupTableAccount: "J5pvpeGcJ8ucg5yEeGJPXsWSLnoog6FWbDsDfcaGfbUw",
+    lookupTableAccount: "CMqmnzDphymGbvdmo8CXJYkGx8tbAZTtGkjDnrUgkdtQ",
     systemManagerAccount: "CXzddeiDgbTTxNnd1apeUGE7E1UAdvBoysf7c271AA79",
     cpSwapProgram: "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
     cpSwapConfigAddress: "D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2",

@@ -111,6 +111,95 @@
       ]
     },
     {
+      "name": "close_system_config",
+      "discriminator": [
+        6,
+        107,
+        135,
+        27,
+        8,
+        208,
+        165,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "system_config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  121,
+                  115,
+                  116,
+                  101,
+                  109,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103,
+                  95,
+                  118,
+                  50,
+                  46,
+                  48
+                ]
+              },
+              {
+                "kind": "const",
+                "value": [
+                  171,
+                  97,
+                  37,
+                  11,
+                  56,
+                  38,
+                  243,
+                  72,
+                  56,
+                  78,
+                  207,
+                  5,
+                  222,
+                  8,
+                  11,
+                  23,
+                  214,
+                  60,
+                  205,
+                  219,
+                  144,
+                  102,
+                  249,
+                  55,
+                  234,
+                  144,
+                  17,
+                  33,
+                  93,
+                  214,
+                  4,
+                  144
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
       "name": "close_token",
       "discriminator": [
         26,
@@ -1164,6 +1253,41 @@
           "writable": true
         },
         {
+          "name": "graduation_control_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
           "name": "pool_state",
           "writable": true,
           "pda": {
@@ -1622,6 +1746,41 @@
         {
           "name": "lp_mint",
           "writable": true
+        },
+        {
+          "name": "graduation_control_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -1882,6 +2041,41 @@
             "The program account for the most recent oracle observation"
           ],
           "writable": true
+        },
+        {
+          "name": "graduation_control_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -2138,6 +2332,41 @@
             "The program account for the most recent oracle observation"
           ],
           "writable": true
+        },
+        {
+          "name": "graduation_control_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         }
       ],
       "args": [
@@ -2394,6 +2623,41 @@
         {
           "name": "lp_mint",
           "writable": true
+        },
+        {
+          "name": "graduation_control_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  114,
+                  97,
+                  100,
+                  117,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
         },
         {
           "name": "memo_program",
@@ -3400,6 +3664,19 @@
       ]
     },
     {
+      "name": "GraduationControlData",
+      "discriminator": [
+        171,
+        21,
+        240,
+        108,
+        120,
+        137,
+        159,
+        145
+      ]
+    },
+    {
       "name": "LaunchRuleData",
       "discriminator": [
         219,
@@ -4244,6 +4521,21 @@
       "code": 6131,
       "name": "SolFeePayerToBeSystemAccount",
       "msg": "Sol fee payer should be system account"
+    },
+    {
+      "code": 6132,
+      "name": "GraduationControlNotInitialized",
+      "msg": "Graduation control account not initialized"
+    },
+    {
+      "code": 6133,
+      "name": "WsolBudgetExceeded",
+      "msg": "WSOL market management budget exceeded in current window"
+    },
+    {
+      "code": 6134,
+      "name": "WsolBudgetInvariantFailed",
+      "msg": "WSOL budget invariant failed"
     }
   ],
   "types": [
@@ -4373,6 +4665,38 @@
       }
     },
     {
+      "name": "GraduationControlData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "graduate_timestamp",
+            "type": "u64"
+          },
+          {
+            "name": "graduate_base_token_base",
+            "type": "u64"
+          },
+          {
+            "name": "used_base_token_budget",
+            "type": "u64"
+          },
+          {
+            "name": "post_graduation_base_token_accumulated",
+            "type": "u64"
+          },
+          {
+            "name": "base_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "base_decimals",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
       "name": "InitializeTokenConfigData",
       "type": {
         "kind": "struct",
@@ -4479,6 +4803,10 @@
           },
           {
             "name": "base_vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "base_mint",
             "type": "pubkey"
           },
           {
